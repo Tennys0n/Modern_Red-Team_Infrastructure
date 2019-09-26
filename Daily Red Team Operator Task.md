@@ -90,9 +90,27 @@
 
 |Active Directory Enumeration | for Example |
 | ------------- | ------------- |
-| [System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain() | current domain info|
-| ([System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()).GetAllTrustRelationships() | domain trusts|
-| [System.DirectoryServices.ActiveDirectory.Forest]::GetCurrentForest() | current forest info|
+
+
+
+| for Example |
+| ------------- |
+**current domain info**
+```
+[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()
+```
+**domain trusts**
+```
+([System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()).GetAllTrustRelationships()
+```
+**current forest info**
+```
+ [System.DirectoryServices.ActiveDirectory.Forest]::GetCurrentForest()
+```
+
+```
+
+
 | Get-NetDomain                                         | gets the name of the current user's domain|
 | Get-NetForest                                         | gets the forest associated with the current user's domain|
 | Get-NetForestDomain                                   | gets all domains for the current forest|
@@ -105,6 +123,8 @@
 | Get-ObjectAcl                                         | returns the ACLs associated with a specific active directory object|
 | Get-DomainSID                                         | return the SID for the specified domain|
 | Get-NetFileServer                                     | get a list of file servers used by current domain users|
+```
+
 
 
 ### Commands Execute Remotely using Both Plaintext and NTLM
