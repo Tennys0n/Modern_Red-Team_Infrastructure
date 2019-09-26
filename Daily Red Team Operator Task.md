@@ -20,17 +20,22 @@
 | for Example |
 | ------------- |
 |smbmap -H 10.10.10.103 # N No password |
-|smbclient -N -L \\\\192.168.1.1|
+|smbmap -u MeMe -r BatShare -H 10.10.10.130|
 |smbclient -N //192.168.1.1/SYSVOL|
 |smbmap -H 10.10.10.103 -u MeMe -p 123456aQ |
 |smbclient \\\\10.10.10.100\\NETLOGON|
 |smbclient \\\\10.10.10.100\\Replication|
-|smbmap -u MeMe -r BatShare -H 10.10.10.130|
+|smbclient -N -L \\\\192.168.1.1|
+|smbclient -L \\host -I 10.11.1.220 |
+|smbclient -L \\host -I 10.11.1.220 -N -U ""|
+|smbclient  //host -I 10.11.1.136/Bob Share -N|
+|smbclient  //host/Bob\ Share -I 10.11.1.136 -N|
 | smbmap -u MeME--download Secret\\Password.zip -H 192.168.1.1|
 |smbmap.py -H 10.10.10.100 -d active.htb -u SVC_TGS -p GPPstillStandingStrong2k18|
-| smbclient -N -L \\\\10.10.10.103 | grep Disk | sed 's/^\s*\(.*\)\s*Disk.*/\1/' |
+| smbclient -N -L \\\\192.168.1.1 | grep Disk | sed 's/^\s*\(.*\)\s*Disk.*/\1/' |
 |smbclient \\\\10.10.10.103\\C$  -U "Administrator" --pw-nt-hash f6b7160bfc91823792e0ac3a162c9267|
 | mount -t cifs //10.10.10.134/Backups /mnt/smb #Mount|
+
 
 ### Commonly Users and Service Enumeration Through Running RPC and SNMP Services
 
