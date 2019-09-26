@@ -7,6 +7,10 @@ When it come to obtaining access to a compromise box, I prefer to look at Miscon
  ![](http://www.free4readers.com/photo_news/news/2018_Graceful_MHK/1.jpg)
 ```
 ![](http://www.free4readers.com/photo_news/news/2018_Graceful_MHK/1.jpg)
+
+```
+``````````
+```
 ### Weak Service Permissions
 ```
 ```
