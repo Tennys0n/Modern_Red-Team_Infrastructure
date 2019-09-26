@@ -4,7 +4,7 @@ When it come to obtaining access to a compromise box, I prefer look at Misconfig
 
 ### Weak Folder Permissions
 ```
- ***test***
+ 
 ```
 
 ### Weak Service Permissions
