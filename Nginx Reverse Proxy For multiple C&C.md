@@ -1,7 +1,7 @@
 
 
 
-### Nginx Reverse Proxy Cobalt Strike, Metasploit and Empire
+### Nginx Reverse Proxy for Cobalt Strike, Metasploit and Empire
 ```
 server {
         listen 443 ssl;
